@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>nl.agility.maven</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>nl.agility.commons</groupId>
+    <artifactId>commons-repository-mongodb</artifactId>
+    <version>1.0.0-${revision}</version>
+
+    <name>Agility IT Services - Commons Repository MongoDB</name>
+    <description>The Agility IT Services' Commons Repository MongoDB</description>
+
+    <scm>
+        <url>https://github.com/aduursma/commons-repository-mongodb</url>
+        <connection>scm:git:git://github.com/aduursma/commons-repository-mongodb.git</connection>
+        <developerConnection>scm:git:git@github.com:aduursma/commons-repository-mongodb.git</developerConnection>
+    </scm>
+
+    <properties>
+        <revision>SNAPSHOT</revision>
+        <fongo.version>2.1.0</fongo.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fakemongo</groupId>
+            <artifactId>fongo</artifactId>
+            <version>${fongo.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
